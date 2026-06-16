@@ -1,148 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Casino Online</title>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '27241653532185480');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=27241653532185480&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
-<style>
+    <title>Casino Online</title>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html,
-body{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#000;
-}
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+        }
 
-.hero{
-    position:relative;
-    width:100%;
-    height:100vh;
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
 
-    /* CAMBIAR POR TU IMAGEN */
-    background:url("images/fondo3.png")
-    center center
-    no-repeat;
+            /* CAMBIAR POR TU IMAGEN */
+            background: url("images/fondo3.png") center center no-repeat;
 
-    background-size:cover;
-}
+            background-size: cover;
+        }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.08);
-}
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .08);
+        }
 
-/* BOTON */
+        /* BOTON */
 
-.whatsapp-btn{
-    position:absolute;
-    left:50%;
-    bottom:40px;
-    transform:translateX(-50%);
+        .whatsapp-btn {
+            position: absolute;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
 
-    width:min(92%, 430px);
-    height:95px;
+            width: min(92%, 430px);
+            height: 95px;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
-    text-decoration:none;
-    color:white;
+            text-decoration: none;
+            color: white;
 
-    border-radius:60px;
+            border-radius: 60px;
 
-    background:linear-gradient(
-        180deg,
-        #4eff8f 0%,
-        #0dc84f 100%
-    );
+            background: linear-gradient(180deg,
+                    #4eff8f 0%,
+                    #0dc84f 100%);
 
-    border:4px solid rgba(255,255,255,.35);
+            border: 4px solid rgba(255, 255, 255, .35);
 
-    box-shadow:
-        inset 0 4px 8px rgba(255,255,255,.35),
-        0 0 35px rgba(0,255,100,.55);
+            box-shadow:
+                inset 0 4px 8px rgba(255, 255, 255, .35),
+                0 0 35px rgba(0, 255, 100, .55);
 
-    z-index:10;
-}
+            z-index: 10;
+        }
 
 
-.whatsapp-btn::before{
-    left:18px;
-}
+        .whatsapp-btn::before {
+            left: 18px;
+        }
 
-.whatsapp-btn::after{
-    right:18px;
-}
+        .whatsapp-btn::after {
+            right: 18px;
+        }
 
-.whatsapp-btn strong{
-    font-size:2rem;
-    font-weight:900;
-    font-style:italic;
-    text-transform:uppercase;
-    line-height:.9;
-    text-shadow:0 2px 4px rgba(0,0,0,.4);
-}
+        .whatsapp-btn strong {
+            font-size: 2rem;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            line-height: .9;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, .4);
+        }
 
-.whatsapp-btn span{
-    margin-top:8px;
-    font-size:.95rem;
-    font-weight:700;
-}
+        .whatsapp-btn span {
+            margin-top: 8px;
+            font-size: .95rem;
+            font-weight: 700;
+        }
 
-/* MOBILE */
+        /* MOBILE */
 
-@media(max-width:480px){
+        @media(max-width:480px) {
 
-    .hero {
-        background-image: url(images/fondomobile.png);
-    }
-    .whatsapp-btn{
-        height:125px;
-        bottom:140px;
-    }
+            .hero {
+                background-image: url(images/fondomobile.png);
+            }
 
-    .whatsapp-btn strong{
-        font-size:1.6rem;
-    }
+            .whatsapp-btn {
+                height: 125px;
+                bottom: 140px;
+            }
 
-    .whatsapp-btn span{
-        font-size:.8rem;
-    }
+            .whatsapp-btn strong {
+                font-size: 1.6rem;
+            }
 
-  
-    
-}
+            .whatsapp-btn span {
+                font-size: .8rem;
+            }
 
-</style>
+
+
+        }
+    </style>
 </head>
 
 <body>
 
-<section class="hero">
+    <section class="hero">
 
-    <a
-        href="https://wa.link/70ffv3"
-        class="whatsapp-btn"
-    >
-        <strong>HABLAR POR<br>WHATSAPP</strong>
-        <span>Tocá acá y empezá ahora</span>
-    </a>
+        <a href="https://wa.link/70ffv3" class="whatsapp-btn">
+            <strong>HABLAR POR<br>WHATSAPP</strong>
+            <span>Tocá acá y empezá ahora</span>
+        </a>
 
-</section>
+    </section>
 
 </body>
+
 </html>
